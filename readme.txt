@@ -5,4 +5,4 @@ User 2, secret = "secret2"
 
 Application can be accessed from http://localhost/      (port 80)
 
-Backend swagger can be accessed from http://localhost:7292/swagger/index.html
+API documentation (swagger):  http://localhost:7292/swagger/index.html
