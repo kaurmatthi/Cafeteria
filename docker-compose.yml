@@ -1,0 +1,23 @@
+version: "3.9"
+services:
+    postgres:
+        image: postgres
+        restart: always
+        environment:
+            POSTGRES_PASSWORD: parool
+    backend:
+        environment:
+            - ASPNETCORE_URLS=http://+:7292
+        ports:
+            - "7292:7292"
+        build: ./Backend/HomeCafeteriaApi/
+        links:
+            - postgres
+    frontend:
+        environment: 
+            - ASPNETCORE_URLS=http://+:80;
+        ports:
+            - "80:80"
+        build: ./Frontend/HomeCafeteriaApp/
+        links: 
+            - backend
