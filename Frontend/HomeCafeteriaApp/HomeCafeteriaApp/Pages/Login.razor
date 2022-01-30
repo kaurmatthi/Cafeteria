@@ -2,6 +2,7 @@
     <div class="row d-flex justify-content-center">
         <div class="d-flex col-lg-3 col-md-4 col-sm-5">
             <div class="row d-flex justify-content-center text-center">
+                @if(LoginFailed != null) {@LoginFailed}
                 <h5>Please sign in</h5>
                 <div>
                     <input type="password" class="form-control mb-2" placeholder="Salesman Secret" @bind="SalesmanId">
@@ -17,5 +18,6 @@
 @code {
     [Parameter]
     public Func<string, Task> SubmitLogin { get; set; }
+    [Parameter] public RenderFragment LoginFailed { get; set; }
     private string SalesmanId { get; set; }
 }

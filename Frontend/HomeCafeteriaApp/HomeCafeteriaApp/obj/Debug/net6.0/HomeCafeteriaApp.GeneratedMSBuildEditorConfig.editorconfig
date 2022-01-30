@@ -11,53 +11,53 @@ build_property.EnableTrimAnalyzer = true
 build_property.IncludeAllContentForSelfExtract = 
 build_property.RootNamespace = HomeCafeteriaApp
 build_property.RootNamespace = HomeCafeteriaApp
-build_property.ProjectDir = C:\Users\Kaur Matthias Raavel\source\repos\HomeCafeteriaApp\HomeCafeteriaApp\
+build_property.ProjectDir = C:\Users\Kaur Matthias Raavel\Source\Repos\Cafeteria\Frontend\HomeCafeteriaApp\HomeCafeteriaApp\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Kaur Matthias Raavel\source\repos\HomeCafeteriaApp\HomeCafeteriaApp
+build_property.MSBuildProjectDirectory = C:\Users\Kaur Matthias Raavel\Source\Repos\Cafeteria\Frontend\HomeCafeteriaApp\HomeCafeteriaApp
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Kaur Matthias Raavel/source/repos/HomeCafeteriaApp/HomeCafeteriaApp/App.razor]
+[C:/Users/Kaur Matthias Raavel/Source/Repos/Cafeteria/Frontend/HomeCafeteriaApp/HomeCafeteriaApp/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Kaur Matthias Raavel/source/repos/HomeCafeteriaApp/HomeCafeteriaApp/Pages/Alert.razor]
+[C:/Users/Kaur Matthias Raavel/Source/Repos/Cafeteria/Frontend/HomeCafeteriaApp/HomeCafeteriaApp/Pages/Alert.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWxlcnQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Kaur Matthias Raavel/source/repos/HomeCafeteriaApp/HomeCafeteriaApp/Pages/Login.razor]
+[C:/Users/Kaur Matthias Raavel/Source/Repos/Cafeteria/Frontend/HomeCafeteriaApp/HomeCafeteriaApp/Pages/Login.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Kaur Matthias Raavel/source/repos/HomeCafeteriaApp/HomeCafeteriaApp/Pages/Product.razor]
+[C:/Users/Kaur Matthias Raavel/Source/Repos/Cafeteria/Frontend/HomeCafeteriaApp/HomeCafeteriaApp/Pages/Product.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Kaur Matthias Raavel/source/repos/HomeCafeteriaApp/HomeCafeteriaApp/Pages/Products.razor]
+[C:/Users/Kaur Matthias Raavel/Source/Repos/Cafeteria/Frontend/HomeCafeteriaApp/HomeCafeteriaApp/Pages/Products.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Kaur Matthias Raavel/source/repos/HomeCafeteriaApp/HomeCafeteriaApp/Pages/Settings.razor]
+[C:/Users/Kaur Matthias Raavel/Source/Repos/Cafeteria/Frontend/HomeCafeteriaApp/HomeCafeteriaApp/Pages/Settings.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2V0dGluZ3MucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Kaur Matthias Raavel/source/repos/HomeCafeteriaApp/HomeCafeteriaApp/Pages/ShoppingCart.razor]
+[C:/Users/Kaur Matthias Raavel/Source/Repos/Cafeteria/Frontend/HomeCafeteriaApp/HomeCafeteriaApp/Pages/ShoppingCart.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hvcHBpbmdDYXJ0LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Kaur Matthias Raavel/source/repos/HomeCafeteriaApp/HomeCafeteriaApp/Shared/NavMenu.razor]
+[C:/Users/Kaur Matthias Raavel/Source/Repos/Cafeteria/Frontend/HomeCafeteriaApp/HomeCafeteriaApp/Shared/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Kaur Matthias Raavel/source/repos/HomeCafeteriaApp/HomeCafeteriaApp/Shared/SurveyPrompt.razor]
+[C:/Users/Kaur Matthias Raavel/Source/Repos/Cafeteria/Frontend/HomeCafeteriaApp/HomeCafeteriaApp/Shared/SurveyPrompt.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Kaur Matthias Raavel/source/repos/HomeCafeteriaApp/HomeCafeteriaApp/_Imports.razor]
+[C:/Users/Kaur Matthias Raavel/Source/Repos/Cafeteria/Frontend/HomeCafeteriaApp/HomeCafeteriaApp/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Kaur Matthias Raavel/source/repos/HomeCafeteriaApp/HomeCafeteriaApp/Shared/MainLayout.razor]
+[C:/Users/Kaur Matthias Raavel/Source/Repos/Cafeteria/Frontend/HomeCafeteriaApp/HomeCafeteriaApp/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-7d7fhjdm24

@@ -16,7 +16,7 @@
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         await Task.Delay(4000);
-        Dismiss();
+        if (Dismiss != null) Dismiss();
     }
 
 }

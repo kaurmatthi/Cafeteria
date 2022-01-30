@@ -6,7 +6,11 @@
 
 @if (Salesman == null)
 {
-    <Login SubmitLogin="SubmitLogin"></Login>
+    <Login SubmitLogin="SubmitLogin">
+        <LoginFailed>
+            @if (failedLogin){<Alert AlertType="danger" Message="Login failed!"/>}
+        </LoginFailed>
+    </Login>
 }
 
 @if (Salesman != null)
@@ -42,6 +46,7 @@
     public List<ProductView> ProductsList = new ();
 
     private ApiHandler _handler = new ();
+    private bool failedLogin;
 
     protected override async Task OnInitializedAsync()
     {
@@ -63,7 +68,9 @@
         {
             Salesman = salesman;
             StoreToken(salesmanId);
+            failedLogin = false;
         }
+        else failedLogin = true;
         StateHasChanged();
     }
 

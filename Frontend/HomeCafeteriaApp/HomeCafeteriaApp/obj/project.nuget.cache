@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Q19IhqgEgsXGWq0I2Do+1faNOjYFO09114o0780RdOeHgZSAWHqX0L4SFmKEBrTgL9jIZjIsT2LlKfQ3z+q4xw==",
+  "dgSpecHash": "jnOa0FwmPlZ3Ov63eKc5ExO2dz7MFYJhGkmpIqqlLfVTr6S7rH8nX1e02vb9eCBw7OROkq2DTiAbYLnS0ndG0g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Kaur Matthias Raavel\\source\\repos\\HomeCafeteriaApp\\HomeCafeteriaApp\\HomeCafeteriaApp.csproj",
+  "projectFilePath": "C:\\Users\\Kaur Matthias Raavel\\Source\\Repos\\Cafeteria\\Frontend\\HomeCafeteriaApp\\HomeCafeteriaApp\\HomeCafeteriaApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Kaur Matthias Raavel\\.nuget\\packages\\microsoft.aspnetcore.authorization\\6.0.1\\microsoft.aspnetcore.authorization.6.0.1.nupkg.sha512",
     "C:\\Users\\Kaur Matthias Raavel\\.nuget\\packages\\microsoft.aspnetcore.components\\6.0.1\\microsoft.aspnetcore.components.6.0.1.nupkg.sha512",

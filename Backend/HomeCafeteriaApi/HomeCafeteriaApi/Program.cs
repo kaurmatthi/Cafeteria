@@ -38,7 +38,7 @@ using (var scope = app.Services.CreateScope())
     ctx.Database.EnsureCreated();
 }
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+if (app.Environment.IsDevelopment() || app.Environment.IsProduction())
 {
     app.UseSwagger();
     app.UseSwaggerUI();

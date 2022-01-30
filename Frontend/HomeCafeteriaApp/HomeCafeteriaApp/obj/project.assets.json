@@ -1646,11 +1646,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Kaur Matthias Raavel\\source\\repos\\HomeCafeteriaApp\\HomeCafeteriaApp\\HomeCafeteriaApp.csproj",
+      "projectUniqueName": "C:\\Users\\Kaur Matthias Raavel\\Source\\Repos\\Cafeteria\\Frontend\\HomeCafeteriaApp\\HomeCafeteriaApp\\HomeCafeteriaApp.csproj",
       "projectName": "HomeCafeteriaApp",
-      "projectPath": "C:\\Users\\Kaur Matthias Raavel\\source\\repos\\HomeCafeteriaApp\\HomeCafeteriaApp\\HomeCafeteriaApp.csproj",
+      "projectPath": "C:\\Users\\Kaur Matthias Raavel\\Source\\Repos\\Cafeteria\\Frontend\\HomeCafeteriaApp\\HomeCafeteriaApp\\HomeCafeteriaApp.csproj",
       "packagesPath": "C:\\Users\\Kaur Matthias Raavel\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Kaur Matthias Raavel\\source\\repos\\HomeCafeteriaApp\\HomeCafeteriaApp\\obj\\",
+      "outputPath": "C:\\Users\\Kaur Matthias Raavel\\Source\\Repos\\Cafeteria\\Frontend\\HomeCafeteriaApp\\HomeCafeteriaApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
