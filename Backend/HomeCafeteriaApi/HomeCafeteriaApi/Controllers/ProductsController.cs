@@ -35,16 +35,20 @@ namespace HomeCafeteriaApi.Controllers
             var instances = await _instances.Get();
 
             return types.Select(type => new ProductView(type.Id, type.Name, 
-                instances.Count(x => x.ProductId == type.Id && x.State == ProductInstanceState.Available), type.ImageUrl, type.Price)).ToList();
+                instances.Count(x => x.ProductId == type.Id && x.State == ProductInstanceState.Available), type.ImageUrl, type.Price))
+                .OrderByDescending(x => x.Quantity).ToList();
         }
 
         [HttpGet("Add/{id}")]
         public async Task<ActionResult<ProductView>> AddProduct(string id, int count)
         {
+            if (count > 1000) return BadRequest();
             var type = await _products.Get(id);
             if (type == null) return NotFound();
+            var instances = new List<ProductInstance>();
             for (var i = 0; i < count; i++)
-                await _instances.Add(new ProductInstance(type.Id));
+                instances.Add(new ProductInstance(type.Id));
+            await _instances.AddRange(instances);
 
             return Ok(type);
         }

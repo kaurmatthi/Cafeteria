@@ -58,7 +58,7 @@
     private string _alertTypeFail = "danger";
     private string _message = "";
     private string AlertMessageSuccess() => $"Successfully added {_message} products.";
-    private string AlertMessageFail() => "Error adding products.";
+    private string AlertMessageFail() => "Error adding products. Make sure you selected a type and that amount is smaller than 1000.";
 
     protected override async Task OnInitializedAsync()
     {
@@ -68,14 +68,10 @@
         Types = await _handler.GetProducts();
     }
 
-    private void ValidateAmount() 
-        => Count = Count > 1000 ? Count = 1000 : Count = Count;
-
     private async Task AddProducts()
     {
         if (Count > 0 && _selectedProduct != "")
         {
-            ValidateAmount();
             var response = await _handler.AddProducts(_selectedProduct, Count);
             if (response is {IsSuccessStatusCode: true }) _success = true;
             SetMessage();

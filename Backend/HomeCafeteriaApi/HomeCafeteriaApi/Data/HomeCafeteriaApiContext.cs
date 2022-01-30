@@ -52,7 +52,7 @@ namespace HomeCafeteriaApi.Data
             mb.Entity<ProductInstance>().HasData(instances);
             var salesman = new Salesman("User 1")
             {
-                Id = "secret"
+                Id = "secret1"
             };
             var salesman2 = new Salesman("User 2")
             {
