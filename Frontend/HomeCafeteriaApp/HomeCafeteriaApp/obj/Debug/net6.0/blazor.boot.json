@@ -196,13 +196,13 @@
       "mscorlib.dll": "sha256-+5VU+MYaTQMTlRe9QKobEjWZWv6I9teAGdNndWSBqWE=",
       "netstandard.dll": "sha256-E5RFhGIaDH5QM6BEbFUuHU8U9wP6N6jbo5MCttzLOCM=",
       "System.Private.CoreLib.dll": "sha256-9NtEbYixyog7vUmeYXyyqzfBXUYl8wxoVQ26Ji7sNRg=",
-      "HomeCafeteriaApp.dll": "sha256-dpR3qteUX6aNassYYk6t\/NiaE9ZNBjh+gOSjVBtEikg="
+      "HomeCafeteriaApp.dll": "sha256-Jaq5LwW8qMUEED0LMV4VAYerlcThqkpujroLvAjWH3o="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
-      "HomeCafeteriaApp.pdb": "sha256-Jl096wRezsmHa1BYr9+gEWc+RHf44LiwcGRSVa1YQw8="
+      "HomeCafeteriaApp.pdb": "sha256-zw9zQG+lYdmrY\/+8oSjZjESgteTqG52vfMRTvd6+coI="
     },
     "runtime": {
       "dotnet.6.0.1.yr5gvxqwij.js": "sha256-awQsJ\/WxYhouHPuE+i3eJqjA4XClQlr2rD6nKvW80ww=",

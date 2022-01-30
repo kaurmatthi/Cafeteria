@@ -68,10 +68,14 @@
         Types = await _handler.GetProducts();
     }
 
+    private void ValidateAmount() 
+        => Count = Count > 1000 ? Count = 1000 : Count = Count;
+
     private async Task AddProducts()
     {
         if (Count > 0 && _selectedProduct != "")
         {
+            ValidateAmount();
             var response = await _handler.AddProducts(_selectedProduct, Count);
             if (response is {IsSuccessStatusCode: true }) _success = true;
             SetMessage();
