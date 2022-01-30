@@ -1,0 +1,22 @@
+﻿@inherits LayoutComponentBase
+@inject NavigationManager _nav;
+
+<div class="page">
+    <main class="d-flex flex-column min-vh-100">
+        <NavMenu RefreshParent="Refresh" />
+        <article class="content px-4">
+            @Body
+        </article>
+        <footer class="mt-auto bg-light text-center text-lg-start">
+            <div class="text-center p-3">
+                © @(DateTime.Now.Year) Charity Cafeteria
+            </div>
+        </footer>
+    </main>
+</div>
+
+@code
+{
+    public void Refresh()
+        => _nav.NavigateTo(_nav.Uri, true);
+}

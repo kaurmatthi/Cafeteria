@@ -1,0 +1,22 @@
+﻿    <div class="alert @GetAlertType()" role="alert">
+        @Message
+    </div>
+
+@code {
+    [Parameter] 
+    public string AlertType { get; set; }
+    [Parameter]
+    public string Message { get; set; }
+    [Parameter]
+    public Action Dismiss { get; set; }
+
+    private string GetAlertType() 
+        => $"alert-{AlertType}";
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await Task.Delay(4000);
+        Dismiss();
+    }
+
+}

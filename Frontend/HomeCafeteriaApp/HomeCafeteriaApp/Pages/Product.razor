@@ -1,0 +1,28 @@
+﻿@using HomeCafeteriaApp.Models
+<div class="card mb-4" style="cursor: pointer">
+    <img style="@GrayScale" src="@Item.ImageUrl" alt="@Item.Name" class="card-img-top col-sm-6 col-md-6" @onclick="ProductClick"/>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-8">        
+                <h5 class="card-title">@(Item.Name) (@Item.Quantity)</h5></div>
+            <div class="col-4">
+                <h5 class="card-title float-end">@(Item.Price) €</h5>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public ProductView Item { get; set; }
+    [Parameter]
+    public Func<string, Task<int>> ProductClickAction { get; set; }
+
+    private string GrayScale => Item.Quantity == 0 ? "filter: grayscale(100%)" : "";
+
+    private async void ProductClick()
+    {
+        Item.Quantity = await ProductClickAction(Item.Id);
+        StateHasChanged();
+    }
+}

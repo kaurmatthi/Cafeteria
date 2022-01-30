@@ -1,0 +1,98 @@
+﻿@page "/"
+@using HomeCafeteriaApp.Models
+@using HomeCafeteriaApp.Api
+@inject IJSRuntime _jsRuntime
+
+
+@if (Salesman == null)
+{
+    <Login SubmitLogin="SubmitLogin"></Login>
+}
+
+@if (Salesman != null)
+{
+    <br/>
+    <div class="row">
+        <h3 class="text-center">Hello, @Salesman.SalesmanName!</h3>
+        <div class="col">
+            <div class="container">
+                <div class="row">
+                    @foreach (var product in ProductsList)
+                    {
+                        <div class="col-lg-4 col-md-6">
+                            <Product Item="product" ProductClickAction="AddToCart"></Product>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mb-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <ShoppingCart Products="@Salesman.Items" SalesmanId="@Salesman.SalesmanId" ClearCart="ClearCart" Checkout="Checkout"></ShoppingCart>
+            </div>
+        </div>
+    </div>
+}
+
+
+@code {
+    public SalesmanView Salesman { get; set; }
+    public List<ProductView> ProductsList = new ();
+
+    private ApiHandler _handler = new ();
+
+    protected override async Task OnInitializedAsync()
+    {
+        var secret = await GetToken();
+        if (secret != "") await SubmitLogin(secret);
+        await RefreshProducts();
+    }
+
+    private async void StoreToken(string id) 
+        => await _jsRuntime.InvokeVoidAsync("localStorage.setItem", "salesmanId", id);
+
+    private async Task<string> GetToken() 
+        => await _jsRuntime.InvokeAsync<string>("localStorage.getItem", "salesmanId");
+
+    private async Task SubmitLogin(string salesmanId)
+    {
+        var salesman = await _handler.GetSalesmanView(salesmanId);
+        if (salesman != null)
+        {
+            Salesman = salesman;
+            StoreToken(salesmanId);
+        }
+        StateHasChanged();
+    }
+
+    private async Task<int> AddToCart(string productId)
+    {
+        var result = await _handler.AddToCart(productId, Salesman.SalesmanId);
+        if (result != null) Salesman = result;
+        StateHasChanged();
+        return result?.ProductCount ?? 0;
+    }
+
+    private async void ClearCart()
+    {
+        Salesman = await _handler.ClearCart(Salesman);
+        await RefreshProducts();
+        StateHasChanged();
+    }
+
+    private async void Checkout()
+    {
+        Salesman = await _handler.Checkout(Salesman);
+        await RefreshProducts();
+        StateHasChanged();
+    }
+
+    private async Task RefreshProducts() 
+        => ProductsList = await GetProducts();
+
+    private async Task<List<ProductView>> GetProducts()
+        => await _handler.GetProducts();
+
+}

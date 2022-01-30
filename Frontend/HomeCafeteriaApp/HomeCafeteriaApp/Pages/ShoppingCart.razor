@@ -1,0 +1,110 @@
+﻿@using HomeCafeteriaApp.Models
+<table class="table">
+    <thead>
+    <tr>
+        <td>Product</td>
+        <td>Amount</td>
+        <td>Price</td>
+        <td>Total price</td>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var product in Products)
+    {
+        <tr>
+            <td>@product.Name</td>
+            <td>@product.Quantity</td>
+            <td>@product.Price €</td>
+            <td>@GetTotalRowPrice(product) €</td>
+        </tr>
+    }
+    <tr>
+        <td></td>
+        <td></td>
+        <td>
+            <b>Total</b>
+        </td>
+        <td>
+            <b>
+                @GetTotalPrice() €
+            </b>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<div class="row">
+    <div class="input-group">
+        <div class="col">
+            <button class="btn btn-primary mt-4" @onclick="ClearCart">Clear</button>
+        </div>
+        <div class="col">
+            <button @onclick="CalculateChange" class="btn btn-primary mt-4">Checkout</button>
+        </div>
+        <div class="col">
+            Cash given: <input @bind="_cash" type="number" min="0" step="any" class="form-control"/>
+        </div>
+    </div>
+    @if (Message)
+    {
+        <div class="text-center mt-4">
+            <Alert AlertType="@_messageType" Message="@_message" Dismiss="@DismissMessage"></Alert>
+        </div>
+    }
+</div>
+
+@code {
+    [Parameter]
+    public List<ProductView> Products { get; set; }
+
+    [Parameter]
+    public string SalesmanId { get; set; }
+
+    [Parameter] 
+    public Action ClearCart { get; set; }
+    [Parameter] 
+    public Action Checkout { get; set; }
+
+    private bool Message = false;
+    private string _message = "";
+    private string _messageType = "";
+    private double _cash = 0;
+
+    private void DismissMessage()
+    {
+        Message = false;
+        _message = "";
+        _messageType = "";
+        StateHasChanged();
+    }
+
+    private void CalculateChange()
+    {
+        if (Products.Count == 0) return;
+        if (_cash >= GetTotalPrice())
+        {
+            _message = _cash > GetTotalPrice() ? 
+                $"Successful purchase! Return {Round(_cash - GetTotalPrice())} € to the customer." 
+                : "Successful purchase!";
+            _messageType = "success";
+            Checkout();
+            _cash = 0;
+        }
+
+        else
+        {
+            _message = $"Not enough money, add {Round(GetTotalPrice() - _cash)} €";
+            _messageType = "danger";
+        }
+        Message = true;
+        StateHasChanged();
+    }
+
+    private double GetTotalRowPrice(ProductView product) 
+        => Round(product.Quantity * product.Price);
+
+    private double GetTotalPrice() 
+        => Round(Products.Sum(GetTotalRowPrice));
+
+    private double Round(double amount) 
+        => Math.Round(amount, 2);
+}
